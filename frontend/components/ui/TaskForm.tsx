@@ -6,7 +6,7 @@ import GlassCard from './GlassCard'
 
 interface TaskFormProps {
   task?: Task
-  onSubmit: (taskData: TaskCreateInput | TaskUpdateInput) => void
+  onSubmit: (taskData: any) => void | Promise<void>
   onCancel?: () => void
 }
 

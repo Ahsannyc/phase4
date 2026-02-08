@@ -9,7 +9,7 @@ import { Task } from '@/lib/types'
 export default function EditTaskPage() {
   const router = useRouter()
   const params = useParams()
-  const taskId = parseInt(Array.isArray(params.id) ? params.id[0] : params.id)
+  const taskId = parseInt(Array.isArray(params.id) ? params.id[0] : (params.id as string))
 
   const [task, setTask] = useState<Task | null>(null)
   const [loading, setLoading] = useState(true)
